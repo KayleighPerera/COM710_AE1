@@ -1,0 +1,89 @@
+/*sets colour of background and white text */
+body {
+    background-color: #D6644A;
+    color: white;
+}
+
+/*sets banner of the page  */
+h1 {
+    background: url('images/banner.jpg');
+    width: auto;
+    height: 500px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    text-align: center;
+    background-position: top right 90px;
+    margin: 0;
+}
+
+/*sets all divs to a certain width and height */
+div {
+    width: 1520px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*sets naviagtion */
+#nvgtn {
+    display: flex;
+    align-items: space-around;
+    justify-content: stretch;
+}
+
+/*organises navigation */
+.nvgtntext {
+    height: 50px;
+    width: 1520px;
+    background: #D6644A;
+    color: white;
+    text-align: center;
+
+}
+
+.mycontainer {
+    width: 1520px;
+    overflow: auto;
+}
+
+.mycontainer div {
+    width: 33%;
+    float: left;
+}
+
+.box1 {
+    background-color: #FFF4A3;
+}
+
+.box2 {
+    background-color: #FFC0C7;
+}
+
+.box3 {
+    background-color: #D9EEE1;
+}
+
+.mycontainer2 {
+    overflow: auto;
+}
+
+.mycontainer2 div {
+    float: left;
+}
+
+.box4 {
+    background-color: #d9eeee;
+    width: 1000px;
+}
+
+.box5 {
+    background-color: #79c294;
+    width: 33.3%
+}
+
+.foot {
+    background-color: #D6644A;
+}
