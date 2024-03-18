@@ -1,0 +1,150 @@
+   /*sets colour of background and white text */
+   body {
+       background-color: #D6644A;
+       color: white;
+       width: auto;
+   }
+
+   table {
+       border-collapse: collapse;
+       width: 100%;
+   }
+
+   th,
+   td {
+       border: 1px solid black;
+       padding: 8px;
+       text-align: left;
+   }
+
+   /*sets banner of the page  */
+   h1 {
+       background: url('../images/banner.jpg');
+       width: auto;
+       height: 500px;
+       color: white;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 60px;
+       text-align: center;
+       background-position: top right 90px;
+       margin: 0;
+   }
+
+   /*sets all divs to a certain width and height */
+   div {
+       width: auto;
+       height: auto;
+       padding-top: 50px;
+       padding-bottom: 50px;
+   }
+
+   /*sets naviagtion */
+   #nvgtn {
+       display: flex;
+       align-items: space-around;
+       justify-content: stretch;
+   }
+
+   /*organises navigation */
+   .nvgtntext {
+       height: 50px;
+       width: 1520px;
+       background: #D6644A;
+       color: white;
+       text-align: center;
+
+   }
+
+   #activity_intro {
+       color: white;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 30px;
+       text-align: center;
+       background-position: top right 90px;
+       margin: 0;
+   }
+
+   /*setting height on only footer divs */
+   footer div {
+       height: 250px;
+       padding: 0px;
+   }
+
+   /*setting width of all three divs */
+   .page_footer {
+       overflow: auto;
+   }
+
+   /*footer */
+   .page_footer div {
+       height: 50px;
+       width: 33.3%;
+       float: left;
+   }
+
+   /*Follow us*/
+   .fa {
+       padding: 20px;
+       font-size: 30px;
+       width: 50px;
+       text-align: center;
+       text-decoration: none;
+   }
+
+   /* Add a hover effect if you want */
+   .fa:hover {
+       opacity: 0.7;
+   }
+
+   /* Facebook */
+   .fa-facebook {
+       background: #3B5998;
+       color: white;
+   }
+
+   /* Twitter */
+   .fa-twitter {
+       background: #55ACEE;
+       color: white;
+   }
+
+   /* Linkedin */
+   .fa-linkedin {
+       background: #007bb5;
+       color: white;
+   }
+
+   /* Youtube */
+   .fa-youtube {
+       background: #bb0000;
+       color: white;
+   }
+
+   /* Instagram */
+   .fa-instagram {
+       background: #125688;
+       color: white;
+   }
+
+   /* Google */
+   .fa-google {
+       background: #dd4b39;
+       color: white;
+   }
+
+   /* CSS styling for table */
+   table {
+       border-collapse: collapse;
+       width: 100%;
+   }
+
+   /* CSS styling for table header and table data cells*/
+   th,
+   td {
+       padding: 8px;
+       text-align: left;
+   }

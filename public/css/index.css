@@ -2,11 +2,12 @@
 body {
     background-color: #D6644A;
     color: white;
+    width: auto;
 }
 
 /*sets banner of the page  */
 h1 {
-    background: url('images/banner.jpg');
+    background: url('../images/banner.jpg');
     width: auto;
     height: 500px;
     color: white;
@@ -21,7 +22,7 @@ h1 {
 
 /*sets all divs to a certain width and height */
 div {
-    width: 1520px;
+    width: auto;
     height: auto;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -44,21 +45,71 @@ div {
 
 }
 
-h2 {
-    color: white;
+
+/*gets all divs in the first container */
+.mycontainer div {
+    width: 33.33%;
+    float: left;
+}
+
+/*sets center alignment for the Solent history  */
+.box1 {
+    background-color: #D6644A;
     text-align: center;
 }
 
-#contactForm {
-    color: white;
+/*sets center alignment for the Solent ambition  */
+.box2 {
+    background-color: #D6644A;
     text-align: center;
-    line-height: 20px;
 }
 
-form {
-    text-align: right;
+/*sets width and margin for the solent ambition  */
+#profile2 {
+    margin-bottom: 20px;
+
 }
 
+/*sets center alignment for the open day information  */
+.box3 {
+    background-color: #D6644A;
+    text-align: center;
+}
+
+/*sets width and margin for the Solent open day */
+#profile3 {
+    width: 400px;
+    height: 245px;
+    margin: 0px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+
+/*Sets the width of the box to 75 percent */
+.box5 {
+    background-color: #D6644A;
+    width: 75%;
+}
+
+/*Sets width of container */
+.mycontainer2 {
+    overflow: auto;
+    margin: 0;
+}
+
+/*sets image to the left of the page */
+.mycontainer2 div {
+    float: left;
+}
+
+/*box 6 contains the spark image */
+.box6 {
+    background: url('../images/profile6.jpg');
+    width: 25%;
+    height: 400px;
+    background-position: center;
+}
 
 /*setting height on only footer divs */
 footer div {
@@ -68,7 +119,6 @@ footer div {
 
 /*setting width of all three divs */
 .page_footer {
-    width: 1520px;
     overflow: auto;
 }
 
