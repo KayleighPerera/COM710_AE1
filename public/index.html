@@ -9,10 +9,14 @@
   </head>
   <body>
     <!--main header-->
-    <h1 id="main_heading">
-      Southampton Solent <br />
-      University
-    </h1>
+    <header id="main_heading">
+    <img
+    src="../images/Logo-solent.svg.png"
+    alt="Solent University Logo"
+    height="50"
+    />
+      <h1>Welcome to Solent University</h1> 
+    </header>
 
     <nav id="nvgtn">
       <!--created a navigaivagion bar using list functions and links to other pages-->
@@ -24,68 +28,46 @@
 
     <hr>
 
-    <!--first three boxes-->
-    <div class="mycontainer">
-      <!--Solent history-->
-      <div class="box1">
-        <img src="images/profile1.jpg" alt="profile1" id="profile1" />
-        <h2>Southampton Solent History</h2>
-        <p>
-          Solent has been a university since July 2005, but it has a long and
-          complex educational history. Incorporated as an independent higher
-          education institution in 1989, the University's origins can be traced
-          back to a private School of Art founded in 1855.
-        </p>
+        <section>
+      <div class="box">
+        <img src="../images/profile1.jpg" alt="Image 1" height="150" />
+        <h2>Activity 1</h2>
+        <p>Southampton Institute became a university on 12 July 2005, 
+          adopting the name Southampton Solent University on 15 August that year.</p>
       </div>
+      <div class="box">
+        <img src="../images/ambitions.jpg" alt="Image 2" height="150" />
+        <h2>Activity 2</h2>
+        <p>The TEF is a national scheme run by the Office for Students (OfS) that 
+          aims to encourage higher education providers to deliver excellence in the 
+          areas students care about the most: teaching, learning, and achieving 
+          positive outcomes from their studies..</p>
+      </div>
+      <div class="box">
+        <img src="../images/open day.jpg" alt="Image 3" height="150" />
+        <h2>Activity 3</h2>
+        <p>To make sure everyone can attend a Solent open day, 
+          we’re offering both on-campus and virtual events. Check below for the next dates,
+           and if you can't wait, we offer an on-demand option too. 
+           We're also running small group campus tours.</p>
+      </div>
+    </section>
 
-      <!--Solent Ambition-->
-      <div class="box2">
-        <img src="images/ambitions.jpg" alt="profile2" id="profile2" />
-        <h2>Southampton Solent Ambition</h2>
+    <section>
+      <div class="left-text">
+        <h2>About Solent University</h2>
         <p>
-          We’re delighted to share the news that we’ve achieved the highest
-          standard in the national TEF review. This Gold award recognises
-          student experience and outcomes which are typically outstanding.
+        We’re focused on the practical side of higher education – 
+        giving our students the connections, experience and confidence 
+        to turn their newfound knowledge into a career with real, 
+        meaningful impact. Whoever you are, whatever your goals, 
+        we want to help you make your mark.
         </p>
       </div>
-
-      <!--Solent open day-->
-      <div class="box3">
-        <img src="images/open day.jpg" alt="profile3" id="profile3" />
-        <h2>Southampton Solent Open Days</h2>
-        <p>
-          To make sure everyone can attend a Solent open day, we’re offering
-          both on-campus and virtual events. Check below for the next dates, and
-          if you can't wait, we offer an on-demand option too. We're also
-          running small group campus tours.
-        </p>
+      <div class="right-image">
+        <img src="../images/solent_university.jpeg" alt="About Image" />
       </div>
-    </div>
-    <!-- end of div for first three-->
-<hr>
-    <!--last two boxes-->
-    <div class="mycontainer2">
-      <div class="box5">
-        <h2>Intoduction</h2>
-        <p>
-          Solent University is all about creating opportunities: for its
-          students, for its staff, for its partners. It offers expertise and
-          experiences you couldn’t get anywhere else, opening doors and making
-          introductions. We’re focused on the practical side of higher education
-          – giving our students the connections, experience and confidence to
-          turn their newfound knowledge into a career with real, meaningful
-          impact. Whoever you are, whatever your goals, we want to help you make
-          your mark. Find out more about what we offer our students or follow
-          the links below to explore our history, governance, campus and recent
-          achievements.
-        </p>
-      </div>
-
-      <div class="box6">
- 
-      </div>
-    </div>
-    <!-- end of div for last two-->
+    </section>
 
     <hr>
     <!--footer created for in a div-->
@@ -96,7 +78,7 @@
       <!--div 1-->
       <div class="box1">
         <p>Contact</p>
-         <p>You are visitor number: <span id="visitor-count">0</span></p>
+        <p>Visitor count: <span id="visitor-count">Loading...</span></p>
         <p><a href="5perek11@solent.ac.uk">5perek11@solent.ac.uk</a></p>
 
         <!-- VISITOR COUNT WOULD GO HERE-->
@@ -127,7 +109,7 @@
         
       </footer>
     </div>
-    <script src="scripts/server.js"></script>
+    <script src="scripts/footer.js"></script>
   </body>
       
 </html>

@@ -9,10 +9,14 @@
   </head>
   <body>
     <!--main header-->
-    <h1 id="main_heading">
-      Southampton Solent <br />
-      University
-    </h1>
+    <header id="main_heading">
+    <img
+    src="../images/Logo-solent.svg.png"
+    alt="Solent University Logo"
+    height="50"
+    />
+      <h1>Welcome to Solent University</h1> 
+    </header>
 
     <nav id="nvgtn">
       <!--created a navigaivagion bar using list functions and links to other pages-->
@@ -22,33 +26,77 @@
       <a class="nvgtntext" href="form.html">Registration</a>
     </nav>
 
-    <hr>
-
-  <table id="moduleTable">
-    <thead>
-      <tr>
-        <th>Module</th>
-        <th>Topic</th>
-        <th>Semester</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Module 1</td>
-        <td>Topic A</td>
-        <th>Semester 1</th>
-        <th>Description 1</th>
-      </tr>
-      <tr>
-        <td>Module 2</td>
-        <td>Topic B</td>
-        <th>Semester 2</th>
-        <th>Description 2</th>
-      </tr>
-      <!-- Add more rows as needed -->
-    </tbody>
-  </table>
+   
+    <hr> 
+    
+    <h2>Modules</h2>
+    
+<table id="myTable">
+  <thead>
+    <tr>
+      <th> 
+        <p>ID</p></td><input type="text" class="filter-input" onkeyup="filterTable(0)" placeholder="Filter by Id...">
+      </th>
+      <th>
+        <p>Name</p><input type="text" class="filter-input" onkeyup="filterTable(1)" placeholder="Filter by Name...">
+      </th>
+      <th>
+        <p>Semester</p><input type="text" class="filter-input" onkeyup="filterTable(2)" placeholder="Filter by Semester...">
+      </th>
+      <th>
+        <p>Description</p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>COM700</td>
+      <td>Sheree Ray</td>
+      <td>3</td>
+      <td>Sheree Ray is a dedicated student 
+        with a passion for academics, leadership, 
+        and community service.</td>
+    </tr>
+    <tr>
+      <td>COM721</td>
+      <td>Ashley Wells</td>
+      <td>2</td>
+      <td>Ashley Wells is a compassionate and 
+        creative student who is dedicated to making
+        a positive impact through her artistic 
+        talents and empathy.</td>
+    </tr>
+    <tr>
+      <td>COM700</td>
+      <td>Esme Penny</td>
+      <td>2</td>
+      <td>
+        Esme Penny is a vivacious and 
+        determined student with a natural 
+        flair for leadership and a passion 
+        for making meaningful connections within 
+        her school community.</td>
+    </tr>
+    <tr>
+      <td>COM720</td>
+      <td>Ashley Wells</td>
+      <td>2</td>
+      <td>Ashley Wells is a compassionate and 
+        creative student who is dedicated to making
+        a positive impact through her artistic 
+        talents and empathy.</td>
+    </tr>
+    <tr>
+      <td>COM715</td>
+      <td>Jack Elliot</td>
+      <td>1</td>
+      <td>Jack Elliot is a dynamic and charismatic 
+        student whose adventurous spirit and quick 
+        wit make him a natural leader both in and 
+        out of the classroom.</td>
+    </tr>
+  </tbody>
+</table>
     <hr>
     <!--footer created for in a div-->
 <footer>
@@ -58,7 +106,7 @@
       <!--div 1-->
       <div class="box1">
         <p>Contact</p>
-         <p>You are visitor number: <span id="visitor-count">0</span></p>
+        <p>Visitor count: <span id="visitor-count">Loading...</span></p>
         <p><a href="5perek11@solent.ac.uk">5perek11@solent.ac.uk</a></p>
 
         <!-- VISITOR COUNT WOULD GO HERE-->
@@ -90,6 +138,7 @@
       </footer>
     </div>
     <script src="scripts/modules.js"></script>
+          <script src="scripts/footer.js"></script>
   </body>
       
 </html>

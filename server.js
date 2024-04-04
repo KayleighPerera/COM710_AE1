@@ -8,6 +8,16 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
 });
 
+// Define a route for serving your spanish page file
+app.get("/spanish", (req, res) => {
+  res.sendFile(path.join(__dirname, "../spanish.html"));
+});
+
+// Define a route for serving your spanish page file
+app.get("/french", (req, res) => {
+  res.sendFile(path.join(__dirname, "../french.html"));
+});
+
 // Define a route for serving your form page file
 app.get("/form", (req, res) => {
   res.sendFile(path.join(__dirname, "../form.html"));

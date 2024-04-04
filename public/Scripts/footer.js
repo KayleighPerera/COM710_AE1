@@ -1,3 +1,26 @@
+// JavaScript code to update visitor count
+window.onload = function () {
+  updateVisitorCount();
+};
+
+function updateVisitorCount() {
+  // Check if localStorage is supported
+  if (typeof Storage !== "undefined") {
+    var count = localStorage.getItem("visitorCount");
+    if (count) {
+      count = parseInt(count);
+      count++;
+    } else {
+      count = 1;
+    }
+    localStorage.setItem("visitorCount", count);
+    document.getElementById("visitor-count").textContent = count;
+  } else {
+    // No web storage support
+    console.log("Sorry! Your browser does not support web storage...");
+  }
+}
+
 // Function to change language based on selection
 function changeLanguage() {
   var language = document.getElementById("language").value;
@@ -7,13 +30,14 @@ function changeLanguage() {
     case "es":
       window.location.href = "spanish.html"; // Redirect to Spanish version
       break;
+    case "fr":
+      window.location.href = "french.html"; // Redirect to french version
+      break;    
     default:
-      window.location.href = "about.html"; // Redirect to English version (default)
+      window.location.href = "index.html"; // Redirect to English version (default)
       break;
   }
 }
 
 // Add event listener to language selector dropdown
-document
-  .getElementById("language")
-  .addEventListener("change", changeLanguage);
+document.getElementById("language").addEventListener("change", changeLanguage);

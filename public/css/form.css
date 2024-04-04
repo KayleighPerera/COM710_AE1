@@ -1,81 +1,64 @@
 /*sets colour of background and white text */
 body {
-    background-color: #D6644A;
-    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 /*sets banner of the page  */
-h1 {
+header {
     background: url('../images/banner.jpg');
-    width: auto;
-    height: 500px;
+    background-size: cover;
     color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/*sets naviagtion */
+#nvgtn {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/*organises navigation */
+nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+/*sets a hover in the navigation */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+h2 {
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 30px;
     text-align: center;
     background-position: top right 90px;
     margin: 0;
 }
 
-/*sets all divs to a certain width and height */
-div {
-    height: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-
-/*sets naviagtion */
-#nvgtn {
-    display: flex;
-    align-items: space-around;
-    justify-content: stretch;
-}
-
-/*organises navigation */
-.nvgtntext {
-    height: 50px;
-    width: 1520px;
-    background: #D6644A;
-    color: white;
-    text-align: center;
-
-}
-
-h2 {
-    color: white;
-    text-align: center;
-}
-
 #contactForm {
-    color: white;
+    color: black;
     text-align: center;
     line-height: 20px;
 }
 
-form {
-    text-align: right;
-}
-
-
-/*setting height on only footer divs */
-footer div {
-    height: 250px;
-    padding: 0px;
-}
-
-/*setting width of all three divs */
-.page_footer {
-    overflow: auto;
-}
-
-/*footer */
-.page_footer div {
-    height: 50px;
-    width: 33.3%;
-    float: left;
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 /*Follow us*/
