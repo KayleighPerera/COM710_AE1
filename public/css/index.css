@@ -36,11 +36,13 @@ nav a:hover {
     color: black;
 }
 
+/*each section of the divs */
 section {
     display: flex;
     padding: 20px;
 }
 
+/*some div are boxes */
 .box {
     width: 30%;
     padding: 20px;
@@ -49,6 +51,7 @@ section {
     text-align: center;
 }
 
+/* Footer css */
 footer {
     background-color: #333;
     color: white;

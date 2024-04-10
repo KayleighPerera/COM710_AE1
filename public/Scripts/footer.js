@@ -6,7 +6,9 @@ window.onload = function () {
 function updateVisitorCount() {
   // Check if localStorage is supported
   if (typeof Storage !== "undefined") {
+    // gets the item visitor count from each page
     var count = localStorage.getItem("visitorCount");
+    // Check reloaded add one person
     if (count) {
       count = parseInt(count);
       count++;

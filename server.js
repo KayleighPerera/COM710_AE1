@@ -13,7 +13,7 @@ app.get("/spanish", (req, res) => {
   res.sendFile(path.join(__dirname, "../spanish.html"));
 });
 
-// Define a route for serving your spanish page file
+// Define a route for serving your french page file
 app.get("/french", (req, res) => {
   res.sendFile(path.join(__dirname, "../french.html"));
 });
@@ -28,7 +28,7 @@ app.get("/activities", (req, res) => {
   res.sendFile(path.join(__dirname, "../activites.html"));
 });
 
-// Define a route for serving your form page file
+// Define a route for serving your modules page file
 app.get("/modules", (req, res) => {
   res.sendFile(path.join(__dirname, "../modules.html"));
 });

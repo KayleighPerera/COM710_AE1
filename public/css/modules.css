@@ -4,6 +4,7 @@
        font-family: Arial, sans-serif;
    }
 
+   /*page header */
    h2 {
        color: black;
        display: flex;
@@ -14,12 +15,14 @@
        background-position: top right 90px;
        margin: 0;
    }
-   
+
+   /*table*/
    table {
        border-collapse: collapse;
        width: 100%;
    }
 
+   /*table header and table data cells */
    th,
    td {
        border: 1px solid black;
@@ -59,23 +62,13 @@
        color: black;
    }
 
-   #activity_intro {
+   /* Footer css */
+   footer {
+       background-color: #333;
        color: white;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       font-size: 30px;
+       padding: 20px;
        text-align: center;
-       background-position: top right 90px;
-       margin: 0;
    }
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
 
    /*Follow us*/
    .fa {
