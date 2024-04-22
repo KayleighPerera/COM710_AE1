@@ -16,18 +16,54 @@
        margin: 0;
    }
 
-   /*table*/
+   /* Define styles for the table */
    table {
        border-collapse: collapse;
        width: 100%;
    }
 
-   /*table header and table data cells */
+   /* Define styles for table header cells and data cells */
    th,
    td {
-       border: 1px solid black;
+       border: 1px solid #ddd;
        padding: 8px;
        text-align: left;
+       position: relative;
+   }
+
+   /* Define styles for table header cells */
+   th {
+       cursor: pointer;
+   }
+
+   /* Define styles for arrow icons */
+   .arrow-up,
+   .arrow-down {
+       width: 0;
+       height: 0;
+       border-left: 5px solid transparent;
+       border-right: 5px solid transparent;
+       position: absolute;
+       right: 8px;
+       top: 10px;
+   }
+
+   /* Define styles for upward arrow */
+   .arrow-up {
+       border-bottom: 5px solid black;
+   }
+
+   /* Define styles for downward arrow */
+   .arrow-down {
+       border-top: 5px solid black;
+       display: none;
+       /* Hide the downward arrow initially */
+   }
+
+   /* Adjusted width for the semester column so icon can fit in*/
+   th:nth-child(3),
+   td:nth-child(3) {
+       width: 10%;
    }
 
    /*sets banner of the page  */

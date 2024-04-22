@@ -38,19 +38,11 @@
   <thead>
     <tr>
       <!-- filters added so you are able to cut down the students-->
-      <th> 
-        <p>ID</p></td><input type="text" class="filter-input" onkeyup="filterTable(0)" placeholder="Filter by Id...">
-      </th>
-      <th>
-        <p>Name</p><input type="text" class="filter-input" onkeyup="filterTable(1)" placeholder="Filter by Name...">
-      </th>
-      <th>
-        <p>Semester</p><input type="text" class="filter-input" onkeyup="filterTable(2)" placeholder="Filter by Semester...">
-      </th>
-      <th>
-        <p>Description</p>
-      </th>
-    </tr>
+            <th onclick="sortTable(0)">ID <span class="arrow-up"></span><span class="arrow-down"></span></th>
+            <th onclick="sortTable(1)">Name <span class="arrow-up"></span><span class="arrow-down"></span></th>
+            <th onclick="sortTable(2)">Semester <span class="arrow-up"></span><span class="arrow-down"></span></th>
+            <th onclick="sortTable(3)">Description <span class="arrow-up"></span><span class="arrow-down"></span></th>
+        </tr>
   </thead>
   <tbody>
     <!-- student 1-->
@@ -96,16 +88,52 @@
     </tr>
     <!-- student 5-->
     <tr>
-      <td>COM715</td>
-      <td>Jack Elliot</td>
-      <td>1</td>
-      <td>Jack Elliot is a dynamic and charismatic 
-        student whose adventurous spirit and quick 
-        wit make him a natural leader both in and 
-        out of the classroom.</td>
+        <td>COM715</td>
+        <td>Jack Elliot</td>
+        <td>1</td>
+        <td>Jack Elliot is a dynamic and charismatic 
+          student whose adventurous spirit and quick 
+          wit make him a natural leader both in and 
+          out of the classroom.</td>
+    </tr>
+        <!-- student 6-->
+    <tr>
+        <td>COM721</td>
+        <td>Alice Johnson</td>
+        <td>2</td>
+        <td>Alice Johnson is an enthusiastic student who excels in both academics and extracurricular activities.</td>
+    </tr>
+        <!-- student 7-->
+    <tr>
+        <td>COM702</td>
+        <td>Michael Smith</td>
+        <td>4</td>
+        <td>Michael Smith is a diligent student with a strong work ethic and a passion for learning.</td>
+    </tr>
+        <!-- student 8-->
+    <tr>
+        <td>COM725</td>
+        <td>Emily Brown</td>
+        <td>1</td>
+        <td>Emily Brown is a creative thinker who enjoys exploring new ideas and problem-solving challenges.</td>
+    </tr>
+        <!-- student 9-->
+    <tr>
+        <td>COM710</td>
+        <td>David Wilson</td>
+        <td>3</td>
+        <td>David Wilson is a natural leader who actively participates in school events and fosters a sense of community.</td>
+    </tr>
+        <!-- student 10-->
+    <tr>
+        <td>COM735</td>
+        <td>Samantha Taylor</td>
+        <td>2</td>
+        <td>Samantha Taylor is a dedicated student who strives for excellence in all her endeavors.</td>
     </tr>
   </tbody>
 </table>
+
     <hr>
     <!--footer created for in a div-->
 <footer>

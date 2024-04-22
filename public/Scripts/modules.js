@@ -1,29 +1,45 @@
-// Allows filters to work creates a function called filterTable
-function filterTable(columnIndex) {
-  var input, filter, table, tr, td, i, txtValue;
-  // Gets all elements from the modules.html page
-  input = document.getElementsByClassName("filter-input")[columnIndex];
-  filter = input.value.toUpperCase();
+function sortTable(colIndex) {
+  // Get the table and initialize variables
+  var table, rows, switching, i, x, y, shouldSwitch;
   table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  // Loop through each row of the table
-  for (i = 0; i < tr.length; i++) {
-    // Get the cell in the specified column for the current row
-    td = tr[i].getElementsByTagName("td")[columnIndex];
+  switching = true;
 
-    // Check if the cell exists
-    if (td) {
-      // Get the text content of the cell, considering browser compatibility
-      txtValue = td.textContent || td.innerText;
-
-      // Check if the text content of the cell contains the filter text, ignoring case
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        // If the filter text is found, display the row
-        tr[i].style.display = "";
-      } else {
-        // If the filter text is not found, hide the row
-        tr[i].style.display = "none";
+  // Loop through the table rows until no more switching is needed
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < rows.length - 1; i++) {
+      shouldSwitch = false;
+      // Get the content of the cells in the current and next rows
+      x = rows[i].getElementsByTagName("td")[colIndex];
+      y = rows[i + 1].getElementsByTagName("td")[colIndex];
+      // Check if the content of the current cell is greater than the next cell, and if so, set shouldSwitch to true
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
       }
     }
+    // If shouldSwitch is true, swap the rows
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+
+  // Toggle arrow direction
+  var arrowUp = table.rows[0]
+    .getElementsByTagName("th")
+    [colIndex].getElementsByClassName("arrow-up")[0];
+  var arrowDown = table.rows[0]
+    .getElementsByTagName("th")
+    [colIndex].getElementsByClassName("arrow-down")[0];
+  if (arrowUp.style.display === "none") {
+    // If arrowUp is hidden, show it and hide arrowDown
+    arrowUp.style.display = "inline-block";
+    arrowDown.style.display = "none";
+  } else {
+    // If arrowUp is visible, hide it and show arrowDown
+    arrowUp.style.display = "none";
+    arrowDown.style.display = "inline-block";
   }
 }
