@@ -1,170 +1,178 @@
-   /*sets colour of background and white text */
-   body {
-       margin: 0;
-       font-family: Arial, sans-serif;
-   }
+/*sets colour of background and white text */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-   /*page header */
-   h2 {
-       color: black;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       font-size: 30px;
-       text-align: center;
-       background-position: top right 90px;
-       margin: 0;
-   }
+/*page header */
+h2 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    background-position: top right 90px;
+    margin: 0;
+}
 
-   /* Define styles for the table */
-   table {
-       border-collapse: collapse;
-       width: 100%;
-   }
+/* Define styles for the table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
-   /* Define styles for table header cells and data cells */
-   th,
-   td {
-       border: 1px solid #ddd;
-       padding: 8px;
-       text-align: left;
-       position: relative;
-   }
+/* Define styles for table header cells and data cells */
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    position: relative;
+}
 
-   /* Define styles for table header cells */
-   th {
-       cursor: pointer;
-   }
+/* Define styles for table header cells */
+th {
+    cursor: pointer;
+}
 
-   /* Define styles for arrow icons */
-   .arrow-up,
-   .arrow-down {
-       width: 0;
-       height: 0;
-       border-left: 5px solid transparent;
-       border-right: 5px solid transparent;
-       position: absolute;
-       right: 8px;
-       top: 10px;
-   }
+/* Define styles for arrow icons */
+.arrow-up,
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+}
 
-   /* Define styles for upward arrow */
-   .arrow-up {
-       border-bottom: 5px solid black;
-   }
+/* Define styles for upward arrow */
+.arrow-up {
+    border-bottom: 5px solid black;
+}
 
-   /* Define styles for downward arrow */
-   .arrow-down {
-       border-top: 5px solid black;
-       display: none;
-       /* Hide the downward arrow initially */
-   }
+/* Define styles for downward arrow */
+.arrow-down {
+    border-top: 5px solid black;
+    display: none;
+    /* Hide the downward arrow initially */
+}
 
-   /* Adjusted width for the semester column so icon can fit in*/
-   th:nth-child(3),
-   td:nth-child(3) {
-       width: 10%;
-   }
+/* Adjusted width for the semester column so icon can fit in*/
+th:nth-child(3),
+td:nth-child(3) {
+    width: 10%;
+}
 
-   /*sets banner of the page  */
-   header {
-       background: url('../images/banner.jpg');
-       background-size: cover;
-       color: white;
-       padding: 20px;
-       text-align: center;
-   }
+/*sets banner of the page */
+header {
+    background: url('../images/banner.jpg');
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-   /*sets naviagtion */
-   #nvgtn {
-       background-color: #333;
-       overflow: hidden;
-       text-align: center;
-   }
+/*sets navigation */
+#nvgtn {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+}
 
+/*organizes navigation */
+nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+}
 
-   /*organises navigation */
-   nav a {
-       display: inline-block;
-       color: white;
-       text-align: center;
-       padding: 14px 30px;
-       text-decoration: none;
-   }
+/*sets a hover in the navigation */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
-   /*sets a hover in the navigation */
-   nav a:hover {
-       background-color: #ddd;
-       color: black;
-   }
+/* Footer css */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-   /* Footer css */
-   footer {
-       background-color: #333;
-       color: white;
-       padding: 20px;
-       text-align: center;
-   }
+/*Follow us*/
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
 
-   /*Follow us*/
-   .fa {
-       padding: 20px;
-       font-size: 30px;
-       width: 50px;
-       text-align: center;
-       text-decoration: none;
-   }
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
 
-   /* Add a hover effect if you want */
-   .fa:hover {
-       opacity: 0.7;
-   }
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
 
-   /* Facebook */
-   .fa-facebook {
-       background: #3B5998;
-       color: white;
-   }
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
 
-   /* Twitter */
-   .fa-twitter {
-       background: #55ACEE;
-       color: white;
-   }
+/* Linkedin */
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
 
-   /* Linkedin */
-   .fa-linkedin {
-       background: #007bb5;
-       color: white;
-   }
+/* Youtube */
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
 
-   /* Youtube */
-   .fa-youtube {
-       background: #bb0000;
-       color: white;
-   }
+/* Instagram */
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
 
-   /* Instagram */
-   .fa-instagram {
-       background: #125688;
-       color: white;
-   }
+/* Google */
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
 
-   /* Google */
-   .fa-google {
-       background: #dd4b39;
-       color: white;
-   }
+/* CSS styling for table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
-   /* CSS styling for table */
-   table {
-       border-collapse: collapse;
-       width: 100%;
-   }
+/* CSS styling for table header and table data cells*/
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
 
-   /* CSS styling for table header and table data cells*/
-   th,
-   td {
-       padding: 8px;
-       text-align: left;
-   }
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+}
