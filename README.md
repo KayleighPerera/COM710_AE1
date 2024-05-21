@@ -29,6 +29,9 @@ Initialise a node project
 <br>
 `npm install express`
 <be>
+<br>
+`npm install mysql`
+<be>
 
 Run the website
 <br>
