@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Southampton Solent University</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <!--main header-->
+    <header id="main_heading">
+      <!--Logo image for header-->
+      <img
+        src="../images/Logo-solent.svg.png"
+        alt="Solent University Logo"
+        height="50"
+      />
+      <h1>Welcome to Solent University</h1>
+    </header>
+
+    <nav id="nvgtn">
+      <!--created a navigaivagion bar using list functions and links to other pages-->
+      <a class="nvgtntext" href="/">About</a>
+      <a class="nvgtntext" href="/activites">Activities</a>
+      <a class="nvgtntext" href="/Modules">Modules</a>
+      <a class="nvgtntext" href="/form">Registration</a>
+      <a class="nvgtntext" href="/database_import">Database Table</a>
+    </nav>
+
+    <hr />
+
+    <!-- Subheading for the database section -->
+    <h2>Database</h2>
+    <!-- Table to display database records -->
+    <table>
+      <!-- Table header -->
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Gender</th>
+          <th>Mobile Number</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <!-- Table body with rows dynamically generated from server-side data -->
+      <tbody>
+        <% Saturday.forEach(row => { %>
+        <tr>
+          <td><strong><%= row.name %></strong></td>
+          <td><strong><%= row.surname %></strong></td>
+          <td><strong><%= row.gender %></strong></td>
+          <td><strong><%= row.mobilenumber %></strong></td>
+          <td><strong><%= row.comment %></strong></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+    <!-- Link to external JavaScript files -->
+    <script src="scripts/form.js"></script>
+    <script src="scripts/footer.js"></script>
+  </body>
+</html>

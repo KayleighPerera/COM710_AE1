@@ -1,7 +1,8 @@
+-- Creates database where information will be stored
+
 CREATE DATABASE students;
 
-
--- Using this information to be put in PhPmyadmin
+-- Creates a table in the students database called student with  7 columns 
 
 CREATE TABLE `student` (
   `name` text NOT NULL,
@@ -11,10 +12,10 @@ CREATE TABLE `student` (
   `password` text NOT NULL,
   `confirmpassword` text NOT NULL,
   `comment` text);
---
--- Dumping data for table `student`
---
 
+--
+-- Dumping random data for table `student`
+--
 INSERT INTO `student` (`name`, `surname`, `mobilenumber`, `gender`, `password`, `confirmpassword`, `comment`) VALUES
 ('John', 'Doe', '1234567890', 'Male', 'password123', 'password123', 'No comment'),
 ('Jane', 'Smith', '0987654321', 'Female', 'qwerty456', 'qwerty456', 'N/A'),
@@ -28,18 +29,18 @@ INSERT INTO `student` (`name`, `surname`, `mobilenumber`, `gender`, `password`, 
 ('James', 'Martinez', '8877665544', 'Male', 'james654', 'james654', 'Test comment');
 
 --
--- ALTER STATEMENT
+-- ALTER STATEMENT to change the table student; adds a unique value which is the mobilenumber
 --
 ALTER TABLE `student`
     ADD UNIQUE (mobilenumber);;
 
 --
--- UPDATE STATEMENT
+-- UPDATE STATEMENT to update the student table to set gender male with the data that starts with a J 
 --
 UPDATE student
 SET gender='Male'
 WHERE name LIKE 'J%';
 
--- DELETE STATEMENT
+-- DELETE STATEMENT to delete the females that are inaccuratly given the wrong gender
 DELETE FROM student WHERE surname='Smith';
 DELETE FROM student WHERE surname='Williams';

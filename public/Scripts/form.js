@@ -12,7 +12,7 @@ document
     // $: Denotes the end of the string.
     var mobileNumberPattern = /^\d{11}$/;
 
-  // this suggests that mobile number on form.html should be 11 digits
+    // this suggests that mobile number on form.html should be 11 digits
     if (!mobileNumberPattern.test(mobileNumberInput)) {
       alert("Mobile number must be 11 digits long.");
       event.preventDefault(); // Prevent form submission
@@ -22,7 +22,7 @@ document
 // gets the element from form.html contactForm
 document
   .getElementById("contactForm")
-// adds an event listener
+  // adds an event listener
   .addEventListener("submit", function (event) {
     // grabs both password and confirm password from form.html
     var password = document.getElementById("password").value;

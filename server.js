@@ -25,7 +25,7 @@ db.connect((err) => {
 // Set the directory for views (optional, if you're using the default 'views' directory, you can skip this)
 app.set("views", path.join(__dirname, "views"));
 
-// Define a route to render the EJS file
+// Defines the routes to render the EJS file
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -50,70 +50,69 @@ app.get("/Modules", (req, res) => {
   res.render("Modules");
 });
 
+app.get("/database_import", (req, res) => {
+  db.query(
+    "SELECT * FROM student WHERE gender = 'Male'",
+    (error, first_results) => {
+
+  db.query(
+    "SELECT * FROM student",
+        (error, second_results) => {
+        res.render("database_import", {
+          Friday: first_results,
+          Saturday: second_results,
+        });
+            }
+          );
+        }
+      );
+    }
+  );
+
+
+// Define a POST route handler for the "/form" endpoint
 app.post("/form", (req, res) => {
+  // Log the incoming request body to the console
   console.log(req.body);
+
   try {
+    // Perform a database query to insert form data into the "student" table
     db.query(
       "INSERT INTO student(name, surname, mobilenumber, gender, password, confirmpassword, comment) VALUES(?,?,?,?,?,?,?)",
       [
-        req.body.name,
-        req.body.surname,
-        req.body.mobilenumber,
-        req.body.gender,
-        req.body.password,
-        req.body.confirm_password,
-        req.body.comment,
+        req.body.name, // The name field from the form
+        req.body.surname, // The surname field from the form
+        req.body.mobilenumber, // The mobile number field from the form
+        req.body.gender, // The gender field from the form
+        req.body.password, // The password field from the form
+        req.body.confirm_password, // The confirm password field from the form
+        req.body.comment, // The comment field from the form
       ],
       (error, results) => {
+        // Handle any errors that occur during the database query
         if (error) {
           console.error("Error inserting data into database:", error);
+          // Render the form view with an error message
           res.render("form", { err: "Error inserting data into database" });
         } else {
+          // Log success message and query results to the console
           console.log("Data inserted successfully:", results);
+          // Render the form view with a success message
           res.render("form", { success: "Data inserted successfully" });
         }
       }
     );
   } catch (err) {
+    // Handle any unexpected errors that occur in the try block
     console.error("Caught an error:", err);
+    // Render the form view with a generic error message
     res.render("form", { err: "Caught an error while processing request" });
   }
 });
 
-/*
-// Define a route for serving your spanish page file
-app.get("/spanish", (req, res) => {
-  res.sendFile(path.join(__dirname, "../spanish.html"));
-});
-
-// Define a route for serving your french page file
-app.get("/french", (req, res) => {
-  res.sendFile(path.join(__dirname, "../french.html"));
-});
-
-// Define a route for serving your form page file
-app.get("/form", (req, res) => {
-  rs.sendFile(path.join(__dirname, "../form.html"));
-});
-
-app.post("/index.php", (req, res) => {
-  // Handle POST request here
-  console.log("Received POST request");
-  // You can process the request body and send a response here
-  res.send("POST request received");
-});
-
-// Define a route for serving your activities page file
-app.get("/activities", (req, res) => {
-  res.sendFile(path.join(__dirname, "../activites.html"));
-});
-
-// Define a route for serving your modules page file
-app.get("/modules", (req, res) => {
-  res.sendFile(path.join(__dirname, "../modules.html"));
-});
-*/
-// Start the server on port 3000
+// Start the server and listen on port 3000
 app.listen(3000, () => {
+  // Log a message indicating the server is running and its address
   console.log("Server is running on http://localhost:3000");
 });
+
