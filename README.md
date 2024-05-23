@@ -5,7 +5,8 @@ Ensure Xampp is installed
 <br>
 - Run Apache and MySQL on xampp
 - Run PhpMyAdmin on browser
-- Create database called students using query in `students.mysql` copy the rest of the queries in the sql tab in phpmyadmin
+- There is code which can be activated and create the database and tables which is in server.js (lines 26-62) for PHPMyAdmin OR
+- Can create a database called students using a query in `students.mysql` and copy the rest of the queries in the SQL tab in PHPMyAdmin
 <be>
 
 In the project directory, you can run: <br>
