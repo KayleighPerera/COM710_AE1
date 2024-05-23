@@ -15,14 +15,53 @@ const db = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "students",
 });
 
 db.connect((err) => {
   if (err) throw err;
   console.log("SQL is connected");
 });
-// Set the directory for views (optional, if you're using the default 'views' directory, you can skip this)
+
+// // Create the database
+//     db.query('CREATE DATABASE students', (err, result) => {
+//         if (err) {
+//             console.error('Error creating database: ', err);
+//             return;
+//         }
+//         console.log('Database created successfully');
+        
+// Select the database
+        db.changeUser({database : 'students'}, (err) => {
+            if (err) {
+                console.error('Error changing database: ', err);
+                return;
+        };
+          
+// Create the table (IF DATABASE DOES NOT EXIST ACTIVATE THIS CODE TO CREATE DB AND TABLE)
+    //         const createTableQuery = `
+    //             CREATE TABLE student (
+    //                 name TEXT(225) NOT NULL,
+    //                 surname  TEXT(225) NOT NULL,
+    //                 mobilenumber TEXT(225) NOT NULL,
+    //                 gender TEXT(225) NOT NULL,
+    //                 password TEXT(225) NOT NULL,
+    //                 confirmpassword TEXT(225) NOT NULL,
+    //                 comment TEXT(225)
+    //             )
+    //         `;
+
+    //         db.query(createTableQuery, (err, result) => {
+    //             if (err) {
+    //                 console.error('Error creating table: ', err);
+    //                 return;
+    //             }
+    //             console.log('Table created successfully');
+                
+            });
+        // });
+    // });
+            
+// Set the directory for views 
 app.set("views", path.join(__dirname, "views"));
 
 // Defines the routes to render the EJS file

@@ -1,45 +1,85 @@
+// Object to keep track of the sorting direction for each column
+var sortDirections = {};
+
 function sortTable(colIndex) {
-  // Get the table and initialize variables
-  var table, rows, switching, i, x, y, shouldSwitch;
+  var table,
+    rows,
+    switching,
+    i,
+    x,
+    y,
+    shouldSwitch,
+    dir,
+    switchCount = 0;
+
+  // Get the table element
   table = document.getElementById("myTable");
+
+  // Set the switching flag to true to start the sorting loop
   switching = true;
+
+  // Get the current sorting direction for the column, default to ascending if not set
+  dir = sortDirections[colIndex] || "asc";
 
   // Loop through the table rows until no more switching is needed
   while (switching) {
-    switching = false;
+    switching = false; // Assume no switching is needed
     rows = table.rows;
+
+    // Loop through all table rows (except the header row)
     for (i = 1; i < rows.length - 1; i++) {
       shouldSwitch = false;
-      // Get the content of the cells in the current and next rows
+
+      // Get the two elements to compare, current row and the next row
       x = rows[i].getElementsByTagName("td")[colIndex];
       y = rows[i + 1].getElementsByTagName("td")[colIndex];
-      // Check if the content of the current cell is greater than the next cell, and if so, set shouldSwitch to true
-      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-        shouldSwitch = true;
-        break;
+
+      // Check if the two rows should switch place, based on the direction
+      if (dir === "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // Mark as a switch and break the loop
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir === "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // Mark as a switch and break the loop
+          shouldSwitch = true;
+          break;
+        }
       }
     }
-    // If shouldSwitch is true, swap the rows
+
     if (shouldSwitch) {
+      // If a switch is needed, perform the switch
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
+      switching = true; // Set the switching flag to true to continue looping
+      switchCount++; // Increment the switch count
     }
   }
 
-  // Toggle arrow direction
-  var arrowUp = table.rows[0]
-    .getElementsByTagName("th")
-    [colIndex].getElementsByClassName("arrow-up")[0];
-  var arrowDown = table.rows[0]
-    .getElementsByTagName("th")
-    [colIndex].getElementsByClassName("arrow-down")[0];
-  if (arrowUp.style.display === "none") {
-    // If arrowUp is hidden, show it and hide arrowDown
-    arrowUp.style.display = "inline-block";
-    arrowDown.style.display = "none";
+  // If no switching was done and the direction is "asc", set direction to "desc"
+  if (switchCount === 0 && dir === "asc") {
+    dir = "desc";
+    switching = true; // Continue looping to sort in the new direction
+  } else if (switchCount === 0 && dir === "desc") {
+    // If no switching was done and the direction is "desc", reset to "asc"
+    dir = "asc";
+  }
+
+  // Update the sorting direction for the column
+  sortDirections[colIndex] = dir;
+
+  // Reset all header classes to remove previous sorting states
+  var headers = table.rows[0].getElementsByTagName("th");
+  for (var j = 0; j < headers.length; j++) {
+    headers[j].classList.remove("sorted-asc", "sorted-desc");
+  }
+
+  // Set the appropriate class for the sorted column header to display the correct arrow
+  if (dir === "asc") {
+    headers[colIndex].classList.add("sorted-asc");
   } else {
-    // If arrowUp is visible, hide it and show arrowDown
-    arrowUp.style.display = "none";
-    arrowDown.style.display = "inline-block";
+    headers[colIndex].classList.add("sorted-desc");
   }
 }

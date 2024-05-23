@@ -118,26 +118,26 @@
        background: #dd4b39;
        color: white;
    }
-   
-/* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
 
-    /* Adjust styles for smaller screens here */
-    nav a {
-        display: block;
-        padding: 10px;
-    }
+   /* Media queries for responsiveness */
+   @media only screen and (max-width: 768px) {
 
-    /* Stack the boxes vertically */
-    td {
-        display: block;
-    }
+       /* Adjust styles for smaller screens here */
+       nav a {
+           display: block;
+           padding: 10px;
+       }
 
-    /* Adjust the width of the images */
-    td img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-        /* Add some space between the images */
-    }
-}
+       /* Stack the boxes vertically */
+       td {
+           display: block;
+       }
+
+       /* Adjust the width of the images */
+       td img {
+           width: 100%;
+           height: auto;
+           margin-bottom: 10px;
+           /* Add some space between the images */
+       }
+   }

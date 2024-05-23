@@ -30,13 +30,13 @@ function changeLanguage() {
   // Redirect to the corresponding language version of the page
   switch (language) {
     case "es":
-      window.location.href = "spanish.html"; // Redirect to Spanish version
+      window.location.href = "spanish"; // Redirect to Spanish version
       break;
     case "fr":
-      window.location.href = "french.html"; // Redirect to french version
-      break;    
+      window.location.href = "french"; // Redirect to french version
+      break;
     default:
-      window.location.href = "index.html"; // Redirect to English version (default)
+      window.location.href = "/"; // Redirect to English version (default)
       break;
   }
 }
